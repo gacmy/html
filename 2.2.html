@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>脚本控制交互元素<details></title>
+<style type="text/css">
+	body{
+		font-size:12px
+		}
+	span{
+		font-weight:bold
+		}
+	details{
+		overflow:hidden;
+		height:0;
+		padding-left:200px;
+		position:relative;
+		display:block
+		}
+	details[open]{
+		height:auto;
+	}
+</style>
+</head>
+
+<body>
+	<span onclick="span1_click();">脚注</span>
+    <details id="details">
+    	本页面生成与 2011-09-21
+    </details>
+    <script type="text/javascript">
+		function span1_click(){
+			var objD = document.getElementById("details")
+			var attd = objD.getAttribute("open");
+			if(attd!="open"){
+				objD.setAttribute("open","open");
+			}else{
+				objD.removeAttribute("open");
+			}
+		}
+	</script>
+</body>
+</html>
